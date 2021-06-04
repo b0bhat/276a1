@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<title>Coursys - Grade Calculator</title>
+	<link type="text/css" rel="stylesheet" href="./stylesheets/calculator.css">
+	<script src ="./stylesheets/calculator.js" defer> </script>
+	
+	<!-- <link type="text/css" rel="stylesheet" href="calculator.css">
+  	<script src ="calculator.js" defer> </script> -->
+  	
+  	<link rel="icon" href="https://coursys.sfu.ca/static/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+	<header>
+      <br>
+    </header>
+      <form id="calculator">
+      <h1>Grade Calculator</h1>
+          <div class="blue">
+          <h3>Activities</h3>
+              <p>Give grades to the numeric activities:</p>
+              <table class="tableblock" id="calc">
+                  <tr>
+                      <td class="type"><p>Name</p></td>
+                      <td class="type"><p>Short Name</p></td>
+                      <td class="type"><p>Weight</p></td>
+                      <td class="type"><p>Grade</p></td>
+                      <td class="type"><p>Percentage</p></td>
+                  </tr>
+
+                  <tr>
+                      <td>Activity 1</td>
+                      <td>A1</td>
+                      <td><input type="number" name="A1weight" id="A1weight"  onchange="percentShow(this.id)"/></td>
+                      <td>
+                          <input type="number" name="A1score" id="A1score" onchange="percentShow(this.id)"/>
+                          /
+                          <input type="number" name="A1total" id="A1total" onchange="percentShow(this.id)"/>
+                      </td>
+                      <td id="P1"></td>
+                  </tr>
+
+                  <tr>
+                      <td>Activity 2</td>
+                      <td>A2</td>
+                      <td><input type="number" name="A2weight" id="A2weight" onchange="percentShow(this.id)"/></td>
+                      <td>
+                          <input type="number" name="A2score" id="A2score" onchange="percentShow(this.id)"/>
+                          /
+                          <input type="number" name="A2total" id="A2total" onchange="percentShow(this.id)"/>
+                      </td>
+                      <td id="P2"></td>
+                  </tr>
+
+                  <tr>
+                      <td>Activity 3</td>
+                      <td>A3</td>
+                      <td><input type="number" name="A3weight" id="A3weight" onchange="percentShow(this.id)"/></td>
+                      <td>
+                          <input type="number" name="A3score" id="A3score" onchange="percentShow(this.id)"/>
+                          /
+                          <input type="number" name="A3total" id="A3total" onchange="percentShow(this.id)"/>
+                      </td>
+                      <td id="P3"></td>
+                  </tr>
+
+                  <tr>
+                      <td>Activity 4</td>
+                      <td>A4</td>
+                      <td><input type="number" name="A4weight" id="A4weight" onchange="percentShow(this.id)"/></td>
+                      <td>
+                          <input type="number" name="A4score" id="A4score" onchange="percentShow(this.id)"/>
+                          /
+                          <input type="number" name="A4total" id="A4total" onchange="percentShow(this.id)"/>
+                      </td>
+                      <td id="P4"></td>
+                  </tr>
+              </table>
+              <h3 id="result">Result</h3>
+              <button type="button" onclick="add()">ADD ASSIGNMENT</button>
+              <button id="plus" type="button" onclick="boost()">MARK BOOSTER</button>
+              <button type="button" onclick="unboost()">REALITY (UNBOOST)</button>
+                  <div style="float: right">
+                      <button onclick="calculate('weight')" value="Submit" type="button">WEIGHTED</button>
+                      <button onclick="calculate('mean')" value="Submit" type="button">MEAN</button>
+                  </div>
+          </div>
+      </form>
+  <footer>
+      <br>
+      <br>
+  </footer>
+	
+</body>
+
+</html>
